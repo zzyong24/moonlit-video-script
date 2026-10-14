@@ -4,8 +4,8 @@ description: 将作者口述、已确认材料或已有文章信达雅地组织�
 metadata:
   display_name: 月明·视频脚本
   icon: icon.svg
-  version: "1.2.0"
-  updated: "2026-10-05"
+  version: "1.3.0"
+  updated: "2026-10-14"
 ---
 
 # 🌙 moonlit-video-script · 视频脚本 sub-skill
@@ -43,7 +43,9 @@ MMDDHHMM-[纯中文主题]-视频脚本.md
 **抖音/视频号**：
 - 时长不写死，按用户要求与表达密度安排；每段推进作者主线，不为凑时长重复。
 - 比例：默认 16:9 横屏；只有用户明确指定时使用竖屏
-- 输出镜次表、逐句旁白、预估时长、字幕重点、画面职责、素材来源和留存节点。
+- 输出镜次表、逐句旁白、预估时长、字幕重点、画面职责、素材来源和留存节点。镜次表含“触发词”和“B-roll 类型”两列，制作前导出 `shot-plan.json` 交给制作 Skill（见模板）；动效从脚本阶段就落到具体的词上，不留给剪辑阶段临时补。
+- 起稿前读取 content_brief 的 `creative_concept`（本期母意象，见 `moonlit-content-engine/references/creative-concept.md`），开场与至少一次章节回扣使用它；没有时先按该文件定一个。
+- 成稿前按 `moonlit-business-copywriter/references/writing-toolkit.md` 的“口播节奏”逐句过一遍：一句一个信息、单句 ≤ 20 字为宜、重音落句尾、要出画面处留气口。
 - 开头尽早让观众认出相关处境、问题或好奇，理解继续看的价值；不强制痛点或反差。
 - 每 5–8 秒出现一次信息增量、问题推进、证据、视觉变化或未完成悬念；不能靠空洞反问维持注意力。
 - 结尾可自然结束；需要CTA时至多一个并延续观众收益，不强制占用10秒。
